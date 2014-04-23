@@ -1,6 +1,6 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu-precise12042-x64-vbox43"
-  config.vm.box_url = "http://box.puphpet.com/ubuntu-precise12042-x64-vbox43.box"
+  config.vm.box_url = "http://192.168.1.XX/ubuntu-precise12042-x64-vbox43.box"
 
   config.vm.network "private_network", ip: "192.168.9.10"
 

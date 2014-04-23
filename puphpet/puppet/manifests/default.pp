@@ -661,8 +661,19 @@ if has_key($beanstalkd_values, 'install') and $beanstalkd_values['install'] == 1
   beanstalkd::config { $beanstalkd_values: }
 }
 
-# Clone drupal 8 core
+# Sass/Compass
 
+package { 'sass':
+  ensure   => 'installed',
+  provider => 'gem',
+}
+
+package { 'compass':
+    ensure   => 'installed',
+    provider => 'gem',
+}
+
+# Clone drupal 8 core
 exec { 'public_html':
   path    => '/bin',
   command => 'ln -s /var/www/ /home/vagrant/public_html',
